@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hzT-cK-q45">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,11 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oE6-Tl-TAt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BV-R1-oMQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg5-By-kv8">
                                         <rect key="frame" x="7" y="15" width="48" height="30"/>
@@ -87,22 +84,23 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yg5-By-kv8" secondAttribute="bottom" constant="15" id="0Tu-tB-fuY"/>
                                     <constraint firstItem="PqE-1M-W3Q" firstAttribute="top" secondItem="3BV-R1-oMQ" secondAttribute="top" constant="15" id="3ET-eJ-1mZ"/>
-                                    <constraint firstAttribute="height" constant="60" id="8Ep-eV-pPm"/>
                                     <constraint firstItem="yg5-By-kv8" firstAttribute="top" secondItem="3BV-R1-oMQ" secondAttribute="top" constant="15" id="KzF-ph-FBj"/>
                                     <constraint firstAttribute="trailing" secondItem="PqE-1M-W3Q" secondAttribute="trailing" constant="24" id="UxZ-BE-pN0"/>
                                     <constraint firstItem="yg5-By-kv8" firstAttribute="leading" secondItem="3BV-R1-oMQ" secondAttribute="leading" constant="7" id="rnR-iF-f6a"/>
                                     <constraint firstAttribute="bottom" secondItem="PqE-1M-W3Q" secondAttribute="bottom" constant="15" id="wTA-Ki-s0c"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannana" translatesAutoresizingMaskIntoConstraints="NO" id="oE6-Tl-TAt">
+                                <rect key="frame" x="0.0" y="270.5" width="414" height="355"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3BV-R1-oMQ" firstAttribute="trailing" secondItem="5s4-zp-Nox" secondAttribute="trailing" id="94D-U1-j7C"/>
+                            <constraint firstItem="oE6-Tl-TAt" firstAttribute="top" secondItem="3BV-R1-oMQ" secondAttribute="bottom" constant="62" id="N42-EQ-M51"/>
                             <constraint firstItem="3BV-R1-oMQ" firstAttribute="leading" secondItem="5s4-zp-Nox" secondAttribute="leading" id="QyF-41-gcC"/>
-                            <constraint firstItem="3BV-R1-oMQ" firstAttribute="top" secondItem="5s4-zp-Nox" secondAttribute="top" id="RJW-CH-4CN"/>
                             <constraint firstItem="oE6-Tl-TAt" firstAttribute="trailing" secondItem="5s4-zp-Nox" secondAttribute="trailing" id="S0v-5e-x8e"/>
-                            <constraint firstItem="oE6-Tl-TAt" firstAttribute="top" secondItem="RDY-1o-Bk6" secondAttribute="top" id="ZJb-AJ-hxr"/>
-                            <constraint firstAttribute="bottom" secondItem="oE6-Tl-TAt" secondAttribute="bottom" id="dvL-OV-7Jv"/>
+                            <constraint firstItem="oE6-Tl-TAt" firstAttribute="centerY" secondItem="RDY-1o-Bk6" secondAttribute="centerY" id="YRX-nJ-5pO"/>
                             <constraint firstItem="oE6-Tl-TAt" firstAttribute="leading" secondItem="5s4-zp-Nox" secondAttribute="leading" id="hcP-pD-s89"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5s4-zp-Nox"/>
@@ -116,4 +114,7 @@
             <point key="canvasLocation" x="1162.3188405797102" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bannana" width="355" height="355"/>
+    </resources>
 </document>

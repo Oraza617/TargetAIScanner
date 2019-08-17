@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class PreviewViewController: UIViewController {
 
@@ -15,9 +17,37 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photo.image = self.image
-
+    //    photo.image = self.image
+        detectPhoto(image: photo.image!)
         // Do any additional setup after loading the view.
+    }
+    
+    func detectPhoto(image: UIImage) {
+        //load the machine learning model
+        guard let ciImage = CIImage(image: image) else {
+            fatalError("couldn't convert UI Image to CIImage")
+        }
+        
+        guard let model = try? VNCoreMLModel(for: MobileNet().model)else {
+            fatalError("can't load the ML model")
+        }
+        let request = VNCoreMLRequest(model: model) { (vnRequest, error) in
+            print(vnRequest.results?.first)
+            guard let results = vnRequest.results as? [VNClassificationObservation] else {
+                fatalError("unexpected reuslt")
+            }
+            print(results.first?.confidence)
+            print(results.first?.identifier)
+        }
+        
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
     }
     
 
