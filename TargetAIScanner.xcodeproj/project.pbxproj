@@ -13,6 +13,7 @@
 		03495BC823083D4C00F3C7AF /* TargetAIScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03495BC623083D4C00F3C7AF /* TargetAIScanner.xcdatamodeld */; };
 		03495BCA23083D4E00F3C7AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03495BC923083D4E00F3C7AF /* Assets.xcassets */; };
 		03495BCD23083D4E00F3C7AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03495BCB23083D4E00F3C7AF /* LaunchScreen.storyboard */; };
+		03495BD7230842E900F3C7AF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03495BD6230842E900F3C7AF /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		03495BC923083D4E00F3C7AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03495BCC23083D4E00F3C7AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03495BCE23083D4E00F3C7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03495BD6230842E900F3C7AF /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				03495BBF23083D4C00F3C7AF /* AppDelegate.swift */,
 				03495BC123083D4C00F3C7AF /* ViewController.swift */,
 				03495BC323083D4C00F3C7AF /* Main.storyboard */,
+				03495BD6230842E900F3C7AF /* PreviewViewController.swift */,
 				03495BC923083D4E00F3C7AF /* Assets.xcassets */,
 				03495BCB23083D4E00F3C7AF /* LaunchScreen.storyboard */,
 				03495BCE23083D4E00F3C7AF /* Info.plist */,
@@ -140,6 +143,7 @@
 				03495BC223083D4C00F3C7AF /* ViewController.swift in Sources */,
 				03495BC023083D4C00F3C7AF /* AppDelegate.swift in Sources */,
 				03495BC823083D4C00F3C7AF /* TargetAIScanner.xcdatamodeld in Sources */,
+				03495BD7230842E900F3C7AF /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
