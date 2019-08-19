@@ -13,11 +13,14 @@ class PreviewViewController: UIViewController {
 
     var image: UIImage!
     
+    
+    @IBOutlet weak var resultPhoto: UIImageView!
+    
     @IBOutlet weak var photo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    photo.image = self.image
+        photo.image = self.image
         detectPhoto(image: photo.image!)
         // Do any additional setup after loading the view.
     }
@@ -33,11 +36,21 @@ class PreviewViewController: UIViewController {
         }
         let request = VNCoreMLRequest(model: model) { (vnRequest, error) in
             print(vnRequest.results?.first)
-            guard let results = vnRequest.results as? [VNClassificationObservation] else {
+            guard let results = vnRequest.results as? [VNClassificationObservation], let firstResult = results.first else {
                 fatalError("unexpected reuslt")
             }
             print(results.first?.confidence)
             print(results.first?.identifier)
+            DispatchQueue.main.async {
+                if firstResult.identifier.contains("banana") {
+                    print("banana")
+                    self.resultPhoto.image = UIImage(named: "yes")
+                } else {
+                    print("notbanana")
+                    self.resultPhoto.image = UIImage(named: "no")
+                }
+            }
+
         }
         
         let handler = VNImageRequestHandler(ciImage: ciImage)
